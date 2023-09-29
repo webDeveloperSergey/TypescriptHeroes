@@ -1,3 +1,4 @@
+type PrintReportFn = (someData: ITotalWarehouse) => string;
 type StatusProduct = "empty" | number;
 
 // структура данных склада с одеждой
@@ -47,7 +48,7 @@ const totalData: ITotalWarehouse = {
 // "We need this items: hats, socks, cookers"
 // Товары через запятую, в конце её не должно быть. Пробел после двоеточия, в конце строки его нет.
 
-function printReport(data: ITotalWarehouse): string {
+const printReport: PrintReportFn = (data: ITotalWarehouse) => {
   let result: string;
   const needItemArr: string[] = [];
 
@@ -61,6 +62,6 @@ function printReport(data: ITotalWarehouse): string {
     : (result = "Everything fine");
 
   return result;
-}
+};
 
 console.log(printReport(totalData));
