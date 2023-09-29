@@ -1,3 +1,11 @@
+import {
+  CalculatePayments,
+  ElectricityUserData,
+  SendInvoice,
+  TupleNumbers,
+  WaterUserData,
+} from "./@typesRate";
+
 const electricityUserData: ElectricityUserData = {
   readingsEl: 95,
   unitsEl: "kWt",

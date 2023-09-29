@@ -1,19 +1,19 @@
-type ElectricityUserData = {
+export type ElectricityUserData = {
   readingsEl: number;
   unitsEl: string;
   mode: string;
 };
-type WaterUserData = { readingsWtr: number; unitsWtr: string };
-type TupleNumbers = [number, number];
+export type WaterUserData = { readingsWtr: number; unitsWtr: string };
+export type TupleNumbers = [number, number];
 
-type CalculatePayments = (
+export type CalculatePayments = (
   elData: ElectricityUserData,
   wData: WaterUserData,
   elRate: number,
   wRate: number
 ) => void;
 
-type SendInvoice = (
+export type SendInvoice = (
   monthPayments: TupleNumbers,
   electricityUserData: ElectricityUserData,
   waterUserData: WaterUserData
