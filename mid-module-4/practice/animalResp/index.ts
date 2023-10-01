@@ -7,6 +7,7 @@ import {
   AnimalReqMore,
 } from "./@typesAnimal";
 import { isAvailable, isNotAvailable } from "./animalPredicate";
+import { getTime } from "./helpersAnimal/getTime";
 
 const animalReq: AnimalReq = {
   animal: "cat",
@@ -21,7 +22,7 @@ const animalReqMore: AnimalReqMore = {
 
 const animalRejData: IAnimalRejData = {
   message: "No results found for your search",
-  nextUpdateIn: `${new Date().getHours()}:${new Date().getMinutes() + 10}`,
+  nextUpdateIn: getTime(),
 };
 
 // Response #1
