@@ -13,5 +13,5 @@ enum FormatsOfMedia {
     mov = '.mov',
     mkv = '.mkv',
     flv = '.flv',
-    webM = '.webM'
+    webM = '.webM',
 }
