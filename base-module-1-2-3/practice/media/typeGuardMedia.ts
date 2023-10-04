@@ -1,3 +1,3 @@
 export function isMarksArr(marks: unknown): marks is unknown[] {
-  return Array.isArray(marks) ? true : false;
+  return Array.isArray(marks);
 }
