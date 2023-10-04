@@ -7,10 +7,7 @@ export const countTimeTryAfter = (currTime: string): string => {
 
   if (tryAfterMin > 59) {
     tryAfterMin = 0 + 10;
-    curHour += 1;
   }
-
-  if (curHour > 23) curHour = 0;
 
   return `${curHour}:${tryAfterMin}`;
 };
