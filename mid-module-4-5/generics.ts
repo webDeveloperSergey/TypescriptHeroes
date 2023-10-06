@@ -107,3 +107,19 @@ const server: IDataServer = {
 };
 
 let newFunc: IProcessingFn = processing;
+
+// ==============================================================
+
+interface IUser<ParentsData> {
+  login: string;
+  age: number;
+  parents: ParentsData;
+}
+
+const user: IUser<{ mom: string; father: string }> = {
+  // Проблема в том, что можно передать даже просто строку
+  // { mom: string; father: string } ----> string - Ошибки не будет
+  age: 33,
+  login: "str",
+  parents: { mom: "Anna", father: "Sam" },
+};
